@@ -5,25 +5,31 @@ import AddNote from './componentes/AddNote';
 import Search from './componentes/Search';
 import Header from './componentes/Header';
 function App() {
-  const [notes, setNotes] = useState([
-    {
-    id :nanoid(),
-    text :"This is my first  NOTE!",
-    date :"12/09/2022",
-    
-  },
-  {
-    id :nanoid(),
-    text :"This is  my second NOTE!",
-    date :"13/09/2022",
-    
-  },{
-    id :nanoid(),
-    text :"This is my  third  NOTE!",
-    date: "1/09/2022",
-    
-  },
-]);
+  const [notes, setNotes] = useState(
+    !localStorage.getItem('react-my-app1-data')
+     ?[
+     {
+     id :nanoid(),
+     text :"This is my first  NOTE!",
+     date :"12/09/2022",
+     
+   },
+   {
+     id :nanoid(),
+     text :"This is  my second NOTE!",
+     date :"13/09/2022",
+     
+   },{
+     id :nanoid(),
+     text :"This is my  third  NOTE!",
+     date: "1/09/2022",
+     
+   },
+ ]
+ :JSON.parse(
+   localStorage.getItem('react-my-app1-data')
+ )
+ );
 const [searchText, setsearchText] =useState('');
 const [darkMode, setDarkMode] = useState(false);
 

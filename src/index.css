@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: bisque;
 }
 
 code {
@@ -21,7 +22,7 @@ textarea{
   background-color: aquamarine;
 }
 .save {
-  background-color: green;
+  background-color: rgb(98, 0, 128);
   border: none;
   border-radius: 15px;
   padding: 5px 10px 5px 10px
@@ -42,6 +43,7 @@ textarea{
 	padding-left: 15px;
 	min-height: 100vh;
   min-height: 100vh;
+  position: absolute;
 }
 .notes-list {
 	display: grid;
@@ -53,7 +55,7 @@ textarea{
 }
 
 .note {
-	background-color: #fef68a;
+	background-color: gray;
 	border-radius: 10px;
 	padding: 1rem;
 	min-height: 170px;
@@ -77,15 +79,19 @@ textarea{
 } */
 .search {
   display: flex;
-  align-items: center;
+  align-items: right;
   background-color: aliceblue;
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 1.5em;
+  margin-left: 50em;
+  margin-right: 5em
 }
 .search input{
   border: none;
   background-color: aliceblue;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 .search input:focus{
   outline: none;
